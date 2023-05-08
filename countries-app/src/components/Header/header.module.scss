@@ -1,0 +1,40 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+header {
+  color: $veryDarkBlueText;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5%;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  h1 {
+    @include for-mobile {
+      font-size: 20px;
+    }
+  }
+  .darkMode {
+    color: $veryDarkBlueText;
+    display: flex;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 17px;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    img {
+      height: 100%;
+    }
+  }
+  &.dark {
+    background-color: $darkBlue;
+    color: $white;
+    .darkMode {
+      color: $white;
+    }
+  }
+}

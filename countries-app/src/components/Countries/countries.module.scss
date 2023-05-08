@@ -1,0 +1,21 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins";
+
+.countries {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  gap: 50px;
+  @include for-desktop {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include for-desktop-sm {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include for-mobile {
+    grid-template-columns: 1fr;
+  }
+}
+.darkError {
+  color: $white;
+}
